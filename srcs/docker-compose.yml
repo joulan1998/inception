@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   nginx:
@@ -47,10 +47,18 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/your_login/data/wordpress_data'
+      device: '/Users/ael-garr/data/wordpress_data'
+      # device: '/home/ael-garr/data/wordpress_data'
   mariadb_volume:
     driver: local
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/home/your_login/data/mariadb_data'
+      device: '/Users/ael-garr/data/mariadb_data'
+      # device: '/home/ael-garr/data/mariadb_data'
+
+
+
+
+
+# maybe i should add a hearhcheck for the conainers ??

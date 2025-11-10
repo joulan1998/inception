@@ -26,3 +26,4 @@ wp user create second_user second_user@example.com --allow-root --path='/var/www
 # Set permissions
 chown -R www-data:www-data /var/www/wordpress
 chmod -R 755 /var/www/wordpress
+mkdir -p /run/php #its mine for docker logs word
