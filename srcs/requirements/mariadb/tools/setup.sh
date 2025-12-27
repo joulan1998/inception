@@ -11,7 +11,9 @@ mariadb -e "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'%' WITH GRANT 
 mariadb -e "FLUSH PRIVILEGES;"
 
 # Stop the server
+# service mariadb start
 service mariadb stop
 
 # Start the database in foreground
-exec /usr/bin/mariadbd-safe
+# exec /usr/bin/mariadbd-safe
+mysqld_safe --port=3306 --bind-address=0.0.0.0 --datadir='/var/lib/mysql'
