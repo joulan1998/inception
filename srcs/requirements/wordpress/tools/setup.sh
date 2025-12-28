@@ -9,8 +9,6 @@ if [ ! -f "$WP_PATH/wp-config.php" ]; then
     echo "Installing WordPress..."
 
     curl -s https://wordpress.org/latest.tar.gz | tar xz -C /var/www
-    # mv -r /var/www/wordpress/* "$WP_PATH"
-    # rm -rf /var/www/wordpress
     cp -a /var/www/wordpress/. /var/www/html/
     chown -R www-data:www-data /var/www/html
 
