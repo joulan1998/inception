@@ -1,6 +1,4 @@
-#maybe i will need the 	"Bookworm" because its the ebian 12
-# FROM debian:12
-FROM debian:bullseye
+FROM debian:12
 
 RUN apt-get update && apt-get install -y mariadb-server
 
@@ -11,5 +9,4 @@ RUN chmod +x /tmp/setup.sh
 
 EXPOSE 3306
 
-# CMD ["/tmp/setup.sh"]
 ENTRYPOINT ["/tmp/setup.sh"]
