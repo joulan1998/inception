@@ -1,4 +1,6 @@
-FROM debian:12
+#maybe i will need the 	"Bookworm" because its the ebian 12
+# FROM debian:12
+FROM debian:bullseye
 
 RUN apt-get update && apt-get install -y nginx openssl
 
